@@ -1,8 +1,6 @@
 obtenirDepartements()
 initSelectDep()
 
-
-
 var originalOptions = document.getElementById('cities').innerHTML;
 
 
@@ -67,7 +65,6 @@ async function callApi(url) {
         return json
     } catch (e) {
         console.error(e)
-        return e
     }
 }
 
