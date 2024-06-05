@@ -25,7 +25,7 @@ async function obtenirDepartements() {
 async function obtenirCommunes(codeDepartement) {
     initSelectCities()
 
-    console.log("obtenirCommunes(" + codeDepartement + ")")
+    //console.log("obtenirCommunes(" + codeDepartement + ")")
 
     clearOptionsCities()
 
@@ -47,13 +47,12 @@ async function obtenirCommunes(codeDepartement) {
 
 async function obtenirDetailCommunes(codeCommune) {
 
-    console.log("obtenirDetailCommunes(" + codeCommune + ")")
+    //console.log("obtenirDetailCommunes(" + codeCommune + ")")
 
     const json = await callApi("https://geo.api.gouv.fr/communes/" + codeCommune)
-    console.log("json = ", json)
+    //console.log("json = ", json)
 
     document.body.innerHTML = document.body.innerHTML + "<br> - Nom : " + json.nom + ", Population : " + json.population + ", CP : " + json.codesPostaux[0];
-
 }
 
 async function callApi(url) {
